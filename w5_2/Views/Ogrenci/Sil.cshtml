@@ -1,0 +1,43 @@
+﻿@model w5_2.Models.Ogrenci
+
+@{
+    ViewData["Title"] = "Sil";
+}
+
+<h1>Sil</h1>
+
+<h3>Bunu silmek istediğinize emin misiniz?</h3>
+<div>
+    <h4>Ogrenci</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OgrAd)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OgrAd)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OgrSoyad)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OgrSoyad)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OgrNumara)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OgrNumara)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OgrYas)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OgrYas)
+        </dd>
+    </dl>
+    
+    <form asp-action="Silindi">
+        <input type="submit" value="Sil" class="btn btn-danger" />
+    </form>
+</div>
